@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>韬玮达科技 - 企业级AI应用解决方案</title>
+    <title>AI新零售加盟 | 韬玮达科技 - 总部全托管，您只需接单送货</title>
+    <meta name="description" content="轻投入加盟，代运营零售，即时零售加盟，AI新零售，托管式创业。总部全托管运营，加盟商仅需接单送货，零经验也能轻松开店。">
+    <meta name="keywords" content="轻投入加盟,代运营零售,即时零售加盟,AI新零售,托管式创业,前置仓加盟,闪电仓加盟">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -13,11 +15,15 @@
             --primary-light: #1e293b;
             --accent: #3b82f6;
             --accent-light: #60a5fa;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --success: #10b981;
+            --warning: #f59e0b;
             --text: #334155;
             --text-light: #64748b;
             --white: #ffffff;
             --gray-50: #f8fafc;
             --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
         }
 
         * {
@@ -103,7 +109,7 @@
         }
 
         .nav-cta {
-            background: var(--primary);
+            background: var(--accent-gradient);
             color: var(--white);
             padding: 10px 24px;
             border-radius: 8px;
@@ -114,8 +120,8 @@
         }
 
         .nav-cta:hover {
-            background: var(--accent);
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
         .mobile-menu-btn {
@@ -140,7 +146,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, rgba(59, 130, 246, 0.05) 100%);
             padding: 120px 24px 80px;
             position: relative;
             overflow: hidden;
@@ -153,7 +159,7 @@
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -188,7 +194,7 @@
             content: '';
             width: 8px;
             height: 8px;
-            background: var(--accent);
+            background: var(--success);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
@@ -199,26 +205,33 @@
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 52px;
             font-weight: 700;
             color: var(--primary);
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 24px;
             letter-spacing: -1px;
         }
 
         .hero h1 span {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            background: var(--accent-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
         .hero-desc {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--text-light);
             margin-bottom: 40px;
-            max-width: 480px;
+            max-width: 520px;
         }
 
         .hero-actions {
@@ -228,23 +241,23 @@
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--accent-gradient);
             color: var(--white);
             padding: 16px 32px;
             border-radius: 10px;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--accent);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
 
         .btn-secondary {
@@ -255,7 +268,7 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
-            border: 1px solid var(--gray-100);
+            border: 1px solid var(--gray-200);
             transition: all 0.3s;
         }
 
@@ -271,16 +284,39 @@
             align-items: center;
         }
 
-        .hero-logo {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 20px 40px rgba(15, 23, 42, 0.15));
+        .hero-stats {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 360px;
         }
 
-        /* Services Section */
-        .services {
-            padding: 120px 24px;
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Value Section */
+        .value {
+            padding: 100px 24px;
             background: var(--white);
         }
 
@@ -309,153 +345,219 @@
             margin: 0 auto;
         }
 
-        .services-grid {
+        .value-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
 
-        .service-card {
+        .value-card {
             background: var(--gray-50);
             border-radius: 16px;
-            padding: 40px 32px;
+            padding: 32px 24px;
+            text-align: center;
             transition: all 0.3s;
             border: 1px solid transparent;
         }
 
-        .service-card:hover {
+        .value-card:hover {
             background: var(--white);
             border-color: var(--gray-100);
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
         }
 
-        .service-icon {
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .value-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* AI Features Section */
+        .ai-features {
+            padding: 100px 24px;
+            background: var(--gray-50);
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .ai-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            gap: 24px;
+            transition: all 0.3s;
+            border: 1px solid var(--gray-100);
+        }
+
+        .ai-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .ai-icon {
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            background: var(--accent-gradient);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
             font-size: 24px;
-            color: var(--white);
+            flex-shrink: 0;
         }
 
-        .service-card h3 {
+        .ai-content h3 {
             font-size: 20px;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        .service-card p {
+        .ai-content p {
             font-size: 15px;
             color: var(--text-light);
             line-height: 1.7;
         }
 
-        /* About Section */
-        .about {
-            padding: 120px 24px;
-            background: var(--gray-50);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
-        }
-
-        .about-content p {
-            font-size: 17px;
-            color: var(--text-light);
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-light);
-        }
-
-        .about-visual {
+        /* Process Section */
+        .process {
+            padding: 100px 24px;
             background: var(--white);
-            border-radius: 20px;
-            padding: 48px;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
         }
 
-        .about-visual h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 24px;
-        }
-
-        .about-list {
-            list-style: none;
-        }
-
-        .about-list li {
+        .process-steps {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--gray-100);
-            font-size: 15px;
-            color: var(--text);
+            justify-content: space-between;
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .about-list li:last-child {
-            border-bottom: none;
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: var(--gray-100);
+            z-index: 0;
         }
 
-        .about-list li::before {
-            content: '✓';
-            width: 24px;
-            height: 24px;
-            background: var(--accent);
-            color: var(--white);
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            max-width: 160px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 4px solid var(--accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0 auto 16px;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Support Section */
+        .support {
+            padding: 100px 24px;
+            background: var(--gray-50);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .support-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+            border: 1px solid var(--gray-100);
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .support-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .support-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .support-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
         /* Contact Section */
         .contact {
-            padding: 120px 24px;
+            padding: 100px 24px;
             background: var(--primary);
             color: var(--white);
         }
@@ -473,7 +575,7 @@
             letter-spacing: -0.5px;
         }
 
-        .contact p {
+        .contact > .section-container > p {
             font-size: 18px;
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 48px;
@@ -481,14 +583,16 @@
 
         .contact-wechat {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 48px;
             display: inline-block;
             transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-wechat:hover {
             background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
         }
 
         .contact-wechat img {
@@ -496,6 +600,8 @@
             height: 200px;
             border-radius: 12px;
             margin-bottom: 16px;
+            background: var(--white);
+            padding: 8px;
         }
 
         .contact-wechat p {
@@ -596,24 +702,41 @@
             }
 
             .hero h1 {
-                font-size: 44px;
+                font-size: 40px;
             }
 
             .hero-visual {
                 order: -1;
             }
 
-            .hero-graphic {
-                height: 300px;
+            .hero-stats {
+                max-width: 320px;
             }
 
-            .services-grid {
+            .value-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .about-grid {
+            .ai-grid {
                 grid-template-columns: 1fr;
-                gap: 48px;
+            }
+
+            .support-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps {
+                flex-wrap: wrap;
+                gap: 32px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-step {
+                flex: 0 0 calc(50% - 16px);
+                max-width: none;
             }
         }
 
@@ -632,11 +755,15 @@
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
             }
 
             .hero-desc {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .hero-actions {
@@ -650,29 +777,41 @@
                 text-align: center;
             }
 
-            .services-grid {
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 24px;
+            }
+
+            .hero-stat-number {
+                font-size: 28px;
+            }
+
+            .value-grid,
+            .support-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-header h2 {
-                font-size: 32px;
-            }
-
-            .about-content h2 {
-                font-size: 32px;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .section-header h2,
             .contact h2 {
-                font-size: 32px;
+                font-size: 28px;
+            }
+
+            .ai-card {
+                flex-direction: column;
+                padding: 24px;
+            }
+
+            .process-step {
+                flex: 0 0 100%;
+            }
+
+            .contact-wechat {
+                padding: 32px 24px;
+            }
+
+            .contact-wechat img {
+                width: 160px;
+                height: 160px;
             }
 
             .footer-container {
@@ -727,9 +866,11 @@
                 <span class="logo-text">韬玮达<span>科技</span></span>
             </a>
             <ul class="nav-links">
-                <li><a href="#services">产品服务</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#value">项目优势</a></li>
+                <li><a href="#ai">AI赋能</a></li>
+                <li><a href="#process">加盟流程</a></li>
+                <li><a href="#support">总部支持</a></li>
+                <li><a href="#contact">在线咨询</a></li>
             </ul>
             <a href="#contact" class="nav-cta">立即咨询</a>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
@@ -742,103 +883,195 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#services">产品服务</a>
-        <a href="#about">关于我们</a>
-        <a href="#contact">联系我们</a>
+        <a href="#value">项目优势</a>
+        <a href="#ai">AI赋能</a>
+        <a href="#process">加盟流程</a>
+        <a href="#support">总部支持</a>
+        <a href="#contact">在线咨询</a>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">企业级AI解决方案</div>
-                <h1>用AI驱动<br><span>企业智能化升级</span></h1>
-                <p class="hero-desc">韬玮达科技专注于为企业提供领先的AI应用解决方案，助力业务创新与效率提升。</p>
+                <div class="hero-badge">AI新零售 · 即时零售加盟</div>
+                <h1>总部全托管<br><span>您只需接单送货</span></h1>
+                <p class="hero-subtitle">轻投入加盟 · 代运营零售 · 托管式创业</p>
+                <p class="hero-desc">韬玮达科技AI新零售项目，总部提供选址、装修、铺货、运营全流程托管服务。您无需经验，只需负责接单配送，轻松开启即时零售创业之路。</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">联系我们 →</a>
-                    <a href="#services" class="btn-secondary">了解更多</a>
+                    <a href="#contact" class="btn-primary">立即咨询加盟 →</a>
+                    <a href="#process" class="btn-secondary">了解加盟流程</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="logo.png" alt="韬玮达科技" class="hero-logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>产品与服务</h2>
-                <p>为企业量身定制的AI解决方案，覆盖核心业务场景</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>智能客服系统</h3>
-                    <p>基于大语言模型的智能客服，7×24小时在线服务，精准理解用户意图，提升客户满意度。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>数据分析平台</h3>
-                    <p>AI驱动的数据分析与可视化，自动洞察业务趋势，辅助决策，让数据真正产生价值。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>流程自动化</h3>
-                    <p>智能RPA解决方案，自动化处理重复性工作，释放人力，让团队专注于创造性任务。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>智能营销助手</h3>
-                    <p>AI内容生成与精准投放，提升营销效率，实现千人千面的个性化用户体验。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔒</div>
-                    <h3>私有化部署</h3>
-                    <p>支持本地化部署，数据安全可控，满足企业对数据隐私和合规性的严格要求。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>定制开发服务</h3>
-                    <p>根据企业特定需求，提供端到端的AI应用定制开发，全程技术支持与运维保障。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="section-container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2>关于韬玮达科技</h2>
-                    <p>韬玮达科技是一家专注于企业级AI应用的技术创新公司。我们致力于将前沿的人工智能技术转化为切实可行的商业解决方案。</p>
-                    <p>凭借深厚的技术积累和丰富的行业经验，我们已为众多企业成功实施AI转型，帮助客户在数字化浪潮中保持领先。</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">企业客户</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">成功案例</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">99%</div>
-                            <div class="stat-label">客户满意度</div>
-                        </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">0元</div>
+                        <div class="hero-stat-label">加盟费起步</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">7×24h</div>
+                        <div class="hero-stat-label">AI智能运营</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">6大</div>
+                        <div class="hero-stat-label">总部支持</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">极速</div>
+                        <div class="hero-stat-label">回本周期</div>
                     </div>
                 </div>
-                <div class="about-visual">
-                    <h3>我们的优势</h3>
-                    <ul class="about-list">
-                        <li>资深AI技术团队，核心成员来自头部科技公司</li>
-                        <li>完整的解决方案体系，覆盖咨询、开发、运维全流程</li>
-                        <li>灵活的部署方式，支持公有云、私有云、本地化</li>
-                        <li>持续的技术迭代，确保客户始终使用最新技术</li>
-                        <li>完善的服务体系，7×24小时技术支持响应</li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="value" id="value">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>为什么选择我们</h2>
+                <p>AI驱动的新零售模式，让创业更简单</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>轻资产投入</h3>
+                    <p>无需高额加盟费，总部提供垫资支持，降低创业门槛</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤖</div>
+                    <h3>AI智能运营</h3>
+                    <p>大数据选址、智能选品、自动定价，全程AI赋能决策</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📦</div>
+                    <h3>全托管服务</h3>
+                    <p>选址、装修、铺货、运营，总部一站式全包</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>快速上手</h3>
+                    <p>零经验也能轻松开店，专业培训+全程陪跑</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section class="ai-features" id="ai">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>AI智能赋能</h2>
+                <p>四大AI系统，让经营更智能、更高效</p>
+            </div>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">🔍</div>
+                    <div class="ai-content">
+                        <h3>AI智能选址</h3>
+                        <p>基于大数据和机器学习算法，精准分析区域人流、消费能力和竞争态势，为您锁定最具潜力的黄金位置，从源头提升成功率。</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">📊</div>
+                    <div class="ai-content">
+                        <h3>AI智能定价</h3>
+                        <p>实时监控市场行情和竞品价格，动态调整商品定价策略，在保证竞争力的同时最大化利润空间，让每一单都更值钱。</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">📦</div>
+                    <div class="ai-content">
+                        <h3>AI智能补货</h3>
+                        <p>根据销售数据、季节变化和节假日预测，自动计算最优库存，热销商品不断货，滞销商品及时清，库存周转更高效。</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">📈</div>
+                    <div class="ai-content">
+                        <h3>AI运营监控</h3>
+                        <p>实时经营数据看板，自动生成运营分析报告，智能识别异常并提出优化建议，让您随时掌握店铺经营状况。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>加盟流程</h2>
+                <p>5步轻松开店，全程总部陪跑</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">项目考察</div>
+                    <div class="step-desc">了解项目详情，确认合作意向</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">签约合作</div>
+                    <div class="step-desc">签订加盟协议，正式成为合作伙伴</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">选址装修</div>
+                    <div class="step-desc">AI大数据选址，总部统一装修</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">铺货上线</div>
+                    <div class="step-desc">AI智能选品铺货，系统对接上线</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-title">接单盈利</div>
+                    <div class="step-desc">您只需接单送货，坐享收益</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support" id="support">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>6大总部支持</h2>
+                <p>全方位扶持，让您创业无忧</p>
+            </div>
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">🏠</div>
+                    <h3>选址支持</h3>
+                    <p>大数据精准选址，AI分析锁定高流量区域，从源头提升成功率</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🔧</div>
+                    <h3>装修支持</h3>
+                    <p>统一品牌形象设计，总部提供装修方案和施工指导</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📦</div>
+                    <h3>铺货支持</h3>
+                    <p>AI智能选品+总部供应链，爆款商品一步到位，无需自己找货源</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">💻</div>
+                    <h3>系统支持</h3>
+                    <p>AI运营系统全套赋能，智能管理不费力，数据一目了然</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📖</div>
+                    <h3>培训支持</h3>
+                    <p>从零上手培训，不懂也能快速入门，掌握接单配送全流程</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📞</div>
+                    <h3>全程陪跑</h3>
+                    <p>专属运营顾问7×24小时在线支持，遇到问题随时解答</p>
                 </div>
             </div>
         </div>
@@ -846,15 +1079,15 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2>联系我们</h2>
-            <p>期待与您探讨AI如何赋能您的业务，欢迎扫码添加微信咨询</p>
+        <div class="section-container">
+            <h2>立即咨询加盟</h2>
+            <p>扫码添加微信，获取详细加盟资料和收益测算</p>
             <div class="contact-wechat">
                 <img src="wechat-qr.png" alt="微信二维码">
-                <p>扫描二维码，添加工作微信</p>
+                <p>扫描二维码，添加招商顾问</p>
             </div>
-            <p class="contact-note">工作日 9:00-18:00 快速响应</p>
-            <a href="wechat-qr.png" download="韬玮达科技-微信二维码.png" class="contact-cta">保存微信二维码 →</a>
+            <p class="contact-note">工作日 9:00-18:00 快速响应 | 周末咨询次日回复</p>
+            <a href="wechat-qr.png" download="韬玮达科技-招商咨询.png" class="contact-cta">保存二维码 →</a>
         </div>
     </section>
 
@@ -866,11 +1099,12 @@
                 <span class="footer-logo-text">韬玮达<span>科技</span></span>
             </div>
             <ul class="footer-links">
-                <li><a href="#services">产品服务</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#value">项目优势</a></li>
+                <li><a href="#ai">AI赋能</a></li>
+                <li><a href="#process">加盟流程</a></li>
+                <li><a href="#support">总部支持</a></li>
             </ul>
-            <div class="footer-copyright">© 2024 韬玮达科技 版权所有</div>
+            <div class="footer-copyright">© 2025 韬玮达科技 版权所有</div>
         </div>
     </footer>
 
