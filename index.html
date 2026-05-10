@@ -581,32 +581,46 @@
             margin-bottom: 48px;
         }
 
-        .contact-wechat {
+        .contact-qrs {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .contact-qr-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
-            padding: 48px;
-            display: inline-block;
+            padding: 36px 32px;
+            text-align: center;
             transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .contact-wechat:hover {
+        .contact-qr-item:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-4px);
         }
 
-        .contact-wechat img {
-            width: 200px;
-            height: 200px;
+        .contact-qr-item img {
+            width: 180px;
+            height: 180px;
             border-radius: 12px;
             margin-bottom: 16px;
             background: var(--white);
             padding: 8px;
         }
 
-        .contact-wechat p {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
+        .contact-qr-item h4 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .contact-qr-item p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
             margin-bottom: 0;
         }
 
@@ -1082,12 +1096,20 @@
         <div class="section-container">
             <h2>立即咨询加盟</h2>
             <p>扫码添加微信，获取详细加盟资料和收益测算</p>
-            <div class="contact-wechat">
-                <img src="wechat-qr.png" alt="微信二维码">
-                <p>扫描二维码，添加招商顾问</p>
+            <div class="contact-qrs">
+                <div class="contact-qr-item">
+                    <img src="wechat-qr.png" alt="华中区负责人刘经理">
+                    <h4>华中区负责人</h4>
+                    <p>刘经理</p>
+                </div>
+                <div class="contact-qr-item">
+                    <img src="qr-huabei.jpg" alt="华北区负责人魏经理">
+                    <h4>华北区负责人</h4>
+                    <p>魏经理</p>
+                </div>
             </div>
             <p class="contact-note">工作日 9:00-18:00 快速响应 | 周末咨询次日回复</p>
-            <a href="wechat-qr.png" download="韬玮达科技-招商咨询.png" class="contact-cta">保存二维码 →</a>
+
         </div>
     </section>
 
